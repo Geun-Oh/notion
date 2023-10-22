@@ -2,7 +2,7 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: process.env.NEXT_PUBLIC_ROOT_NOTION_PAGEID,
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -17,9 +17,9 @@ export default siteConfig({
   description: 'Example Next.js Notion Starter Kit Site',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  // twitter: 'transitive_bs',
+  github: 'geun-oh',
+  linkedin: 'hyeonggeun-oh-760a5b240',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
@@ -51,15 +51,22 @@ export default siteConfig({
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
   navigationStyle: 'default'
-  // navigationStyle: 'custom',
   // navigationLinks: [
   //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
+  //     title: 'aws-saa',
+  //     pageId: '93b785312754409cb0a575a383180bc4'
   //   },
   //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
+  //     title: 'front-end',
+  //     pageId: '71d923bcf3c84b5a95af33ad564b8c11'
+  //   },
+  //   {
+  //     title: 'back-end',
+  //     pageId: 'db8ec49431334111a0f2585b24e4a306'
+  //   },
+  //   {
+  //     title: 'devops-infra-sre',
+  //     pageId: 'a68163ca896344feb06ebeb1220df19f'
   //   }
   // ]
 })

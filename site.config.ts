@@ -10,8 +10,8 @@ export default siteConfig({
 
   // basic site info (required)
   name: "Geun-Oh's Personal Docs",
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  domain: 'nov.world',
+  author: 'Hyeonggeun Oh',
 
   // open graph metadata (optional)
   description: "Geun-Oh's Personal Docs",

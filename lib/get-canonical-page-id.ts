@@ -20,9 +20,16 @@ export function getCanonicalPageId(
   if (override) {
     return override
   } else {
-    // return getCanonicalPageIdImpl(pageId, recordMap, {
-    //   uuid
-    // })
-    return pageId
+    const urlPath = getCanonicalPageIdImpl(pageId, recordMap, {
+      uuid
+    })
+
+    const englishRegex = /[A-Za-z]/g
+
+    if (urlPath.match(englishRegex)) {
+      return urlPath
+    } else {
+      return pageId
+    }
   }
 }

@@ -79,9 +79,11 @@ export const NotionPageHeader: React.FC<{
                   {block.format.page_icon}
                 </span>
               )}
-              <span className={cs('title', 'notion-nav-header-active')}>
-                {block.properties.title[0][0]}
-              </span>
+              {block.properties && block.properties.title && (
+                <span className={cs('title', 'notion-nav-header-active')}>
+                  {block.properties.title[0][0]}
+                </span>
+              )}
             </>
           )}
         </div>

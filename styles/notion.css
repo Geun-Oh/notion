@@ -48,8 +48,26 @@
   margin: 0 auto;
 }
 
+.notion-header .notion-nav-header .notion-custom-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.notion-header .notion-nav-header .notion-custom-breadcrumb .notion-nav-header-active {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: calc(100vw - 200px);
+}
+
 .notion-nav-header-rhs {
   gap: 0.5rem;
+}
+
+.notion-breadcrumb-icon {
+  font-size: 1.1rem;
 }
 
 .notion-gallery-grid {

@@ -65,17 +65,19 @@ export const NotionPageHeader: React.FC<{
                 </>
               )}
 
-              <span
-                role='img'
-                aria-label={block.format.page_icon}
-                className={cs(
-                  'icon',
-                  'notion-page-icon',
-                  'notion-breadcrumb-icon'
-                )}
-              >
-                {block.format.page_icon}
-              </span>
+              {block.format.page_icon && (
+                <span
+                  role='img'
+                  aria-label={block.format.page_icon}
+                  className={cs(
+                    'icon',
+                    'notion-page-icon',
+                    'notion-breadcrumb-icon'
+                  )}
+                >
+                  {block.format.page_icon}
+                </span>
+              )}
               <span className={cs('title', 'notion-nav-header-active')}>
                 {block.properties.title[0][0]}
               </span>

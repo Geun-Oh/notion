@@ -23,11 +23,11 @@ export function getCanonicalPageId(
     const urlPath = getCanonicalPageIdImpl(pageId, recordMap, {
       uuid
     })
-
+    const a = urlPath.split('-').slice(0, -1).join('')
     const englishRegex = /[A-Za-z]/g
 
-    if (urlPath.match(englishRegex)) {
-      return urlPath
+    if (a.match(englishRegex)) {
+      return urlPath.split('-').slice(0, -1).join('-')
     } else {
       return pageId
     }

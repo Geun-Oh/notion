@@ -43,6 +43,7 @@ export const NotionPageHeader: React.FC<{
   // if (navigationStyle === 'default') {
   //   return <Header block={block} />
   // }
+  console.log(block)
 
   return (
     <header className='notion-header'>
@@ -65,7 +66,7 @@ export const NotionPageHeader: React.FC<{
                 </>
               )}
 
-              {block.format.page_icon && (
+              {block.format && block.format.page_icon && (
                 <span
                   role='img'
                   aria-label={block.format.page_icon}

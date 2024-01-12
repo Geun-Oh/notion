@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Image from 'next/image'
 
 import * as types from 'notion-types'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
@@ -66,19 +67,19 @@ export const NotionPageHeader: React.FC<{
                 </>
               )}
 
-              {block.format && block.format.page_icon && (
-                <span
-                  role='img'
-                  aria-label={block.format.page_icon}
-                  className={cs(
-                    'icon',
-                    'notion-page-icon',
-                    'notion-breadcrumb-icon'
-                  )}
-                >
-                  {block.format.page_icon}
-                </span>
-              )}
+              {block.format &&
+                block.format.page_icon &&
+                typeof block.format.page_icon !== 'string' && (
+                  <span
+                    role='img'
+                    aria-label={block.format.page_icon}
+                    className={cs(
+                      'icon',
+                      'notion-page-icon',
+                      'notion-breadcrumb-icon'
+                    )}
+                  ></span>
+                )}
               {block.properties && block.properties.title && (
                 <span className={cs('title', 'notion-nav-header-active')}>
                   {block.properties.title[0][0]}

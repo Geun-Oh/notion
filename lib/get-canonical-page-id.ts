@@ -27,7 +27,7 @@ export function getCanonicalPageId(
     const englishRegex = /[A-Za-z]/g
 
     if (a.match(englishRegex)) {
-      return urlPath.split('-').slice(0, -1).join('-')
+      return a
     } else {
       return pageId
     }
